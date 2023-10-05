@@ -8,14 +8,14 @@ public class PlayerControll : MonoBehaviour
 
     private PlayerControlls playerControlls;
     private Vector2 movement;
-
     private Rigidbody2D rb;
+    private Animator myAni;
 
     private void Awake()
     {
         playerControlls = new PlayerControlls();
         rb = GetComponent<Rigidbody2D>();
-        
+        myAni = GetComponent<Animator>();
     }
 
     private void Update()
@@ -35,6 +35,10 @@ public class PlayerControll : MonoBehaviour
     private void playerInput()
     {
         movement = playerControlls.Player.PlayerInput.ReadValue<Vector2>();
+
+        //movement는 InputSystem
+        myAni.SetFloat("moveX", movement.x); 
+        myAni.SetFloat("moveY", movement.y); 
     }
     private void Move()
     {
