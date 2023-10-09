@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  deathVFX: {fileID: 1347314654504969641, guid: 38ed6867618df48b0a8a4cd1e0baa904, type: 3}
 --- !u!95 &1469485873123073132
 Animator:
   serializedVersion: 5

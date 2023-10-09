@@ -10482,10 +10482,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2963567115398789367, guid: fb60ceb43131445cfa3849cf570969bc, type: 3}
-      propertyPath: knockBackTime
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 3787786300217558498, guid: fb60ceb43131445cfa3849cf570969bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.1
@@ -10529,10 +10525,6 @@ PrefabInstance:
     - target: {fileID: 4588486851906568809, guid: fb60ceb43131445cfa3849cf570969bc, type: 3}
       propertyPath: m_Name
       value: Enemy_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228213844626663490, guid: fb60ceb43131445cfa3849cf570969bc, type: 3}
-      propertyPath: startingHealth
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,10 +5,12 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
+    [SerializeField] private GameObject deathVFX;
 
     private int currentHealth;
     Knockback knockback;
     private Flash flash;
+    
 
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class Health : MonoBehaviour
     {
         if(currentHealth <= 0)
         {
+            Instantiate(deathVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
