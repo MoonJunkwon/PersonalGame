@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Attack);
         knockback.GetKnockBack(PlayerControll.Instance.transform, 15f);
         StartCoroutine(flash.FlashRoutine());
         Death();
