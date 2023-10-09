@@ -8,9 +8,11 @@ public class Health : MonoBehaviour
 
     private int currentHealth;
     Knockback knockback;
+    private Flash flash;
 
     private void Awake()
     {
+        flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
     }
 
@@ -24,6 +26,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
         knockback.GetKnockBack(PlayerControll.Instance.transform, 15f);
+        StartCoroutine(flash.FlashRoutine());
         Death();
     }
 
