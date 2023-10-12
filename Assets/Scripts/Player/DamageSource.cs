@@ -10,6 +10,7 @@ public class DamageSource : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Health>())
         {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Attack);
             Health health = other.gameObject.GetComponent<Health>();
             health.TakeDamage(damageAmount);
         }
